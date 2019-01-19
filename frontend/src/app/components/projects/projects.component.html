@@ -14,9 +14,10 @@
         <thead>
           <tr>
             <th scope="col">id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
+            <th >Name</th>
+            <th >Status</th>
+            <th >Creator</th>
+            <th >Action</th>
           </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
             
             <td >{{ project.id }}</td>
             <td>{{ project.name }}</td>
+            <td>{{ project.user.name }}</td>
             <td>
              
 
