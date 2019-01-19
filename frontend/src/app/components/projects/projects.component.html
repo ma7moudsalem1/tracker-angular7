@@ -28,7 +28,7 @@
              
 
               <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width]="clcStatus(project.tasks_count , project.done_tasks_count) + '%'">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width]="clcStatus(project.tasks_count , project.done_tasks_count) + '%'">
                       {{clcStatus(project.tasks_count , project.done_tasks_count)}}%
                   </div>
                 </div>
