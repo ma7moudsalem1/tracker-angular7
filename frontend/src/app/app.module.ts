@@ -8,6 +8,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { CreateComponent } from './components/projects/create/create.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     LoginComponent,
     RegisterComponent,
+    DashboardComponent,
+    ProjectsComponent,
+    TasksComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
