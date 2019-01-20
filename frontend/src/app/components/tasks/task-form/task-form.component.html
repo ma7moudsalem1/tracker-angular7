@@ -1,0 +1,43 @@
+<div class="mt-4 mb-4 col-8 offset-2">
+  <div class="card">
+    <div class="card-header" *ngIf="isCreate">
+      Create Task 
+    </div>
+    <div class="card-header" *ngIf="!isCreate">
+        Edit Task 
+      </div>
+    <div class="card-body">
+      <form #TaskForm=ngForm (ngSubmit)="onSubmit()">
+        <div class="alert alert-danger" [hidden]="!_error">
+          {{_error}}
+        </div>
+        <div class="form-group row">
+          <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="name" [(ngModel)]="form.name" class="form-control" id="inputName3" placeholder="Name" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputStatus3" class="col-sm-2 col-form-label">Status</label>
+          <div class="col-sm-10">
+            <select  name="status" [(ngModel)]="form.status" class="form-control" id="inputStatus3" required>
+              <option value="In Progress">In Progress</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputcomment3" class="col-sm-2 col-form-label">Comment</label>
+          <div class="col-sm-10">
+            <textarea name="comment" class="form-control" id="inputcomment3" [(ngModel)]="form.comment" placeholder="Comment" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary" [disabled]="!TaskForm.valid">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -15,8 +15,8 @@
           <tr>
             <th scope="col">id</th>
             <th >Name</th>
-            <th >Status</th>
             <th >Creator</th>
+            <th >Status</th>
             <th >Action</th>
           </tr>
         </thead>
@@ -37,7 +37,7 @@
 
             </td>
             <td scope="row">
-              <a href="#" class="btn btn-info">
+              <a [routerLink]="['/tasks', project.id]" class="btn btn-info">
                     Tasks
               </a>
 

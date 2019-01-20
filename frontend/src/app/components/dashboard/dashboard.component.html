@@ -1,3 +1,60 @@
-<p>
-  dashboard works!
-</p>
+
+
+
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-3 col-sm-6">
+      <div class="circle-tile ">
+        <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
+        <div class="circle-tile-content dark-blue">
+          <div class="circle-tile-description text-faded"> Users</div>
+          <div class="circle-tile-number text-faded ">{{ stats.users }}</div>
+        </div>
+      </div>
+    </div>
+     
+    <div class="col-lg-3 col-sm-6">
+      <div class="circle-tile ">
+        <a href="#">
+          <div class="circle-tile-heading red">
+            <i class="fa fa-file-text fa-fw fa-3x"></i>
+          </div>
+        </a>
+        <div class="circle-tile-content red">
+          <div class="circle-tile-description text-faded">Projects </div>
+          <div class="circle-tile-number text-faded ">{{ stats.projects }}</div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="col-lg-3 col-sm-6">
+      <div class="circle-tile ">
+        <a href="#">
+          <div class="circle-tile-heading purple">
+            <i class="fa fa-list-ul fa-fw fa-3x"></i>
+          </div>
+        </a>
+        <div class="circle-tile-content purple">
+          <div class="circle-tile-description text-faded">Tasks </div>
+          <div class="circle-tile-number text-faded ">{{ stats.tasks }}</div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="col-lg-3 col-sm-6">
+      <div class="circle-tile ">
+        <a href="#">
+          <div class="circle-tile-heading orange">
+            <i class="fa fa-check fa-fw fa-3x"></i>
+          </div
+          ></a>
+        <div class="circle-tile-content orange">
+          <div class="circle-tile-description text-faded">Done Tasks </div>
+          <div class="circle-tile-number text-faded ">{{ stats.done_task }}</div>
+        </div>
+      </div>
+    </div> 
+  </div> 
+</div>  
+  

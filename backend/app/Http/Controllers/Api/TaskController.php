@@ -22,7 +22,7 @@ class TaskController extends Controller
     public function getProjectTasks($id, Task $tasks, Project $projects)
     {
         $project = $projects->findOrFail($id);
-        return $tasks->whereProjectId($id)->latest()->paginate(15);
+        return $tasks->whereProjectId($id)->latest()->get();
     }
 
     /**
@@ -49,9 +49,9 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Task $task)
     {
-        //
+        return $task;
     }
 
     /**

@@ -12,6 +12,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { CreateComponent } from './components/projects/create/create.component';
+import { TaskFormComponent } from './components/tasks/task-form/task-form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CreateComponent } from './components/projects/create/create.component';
     ProjectsComponent,
     TasksComponent,
     CreateComponent,
+    TaskFormComponent,
   ],
   imports: [
     BrowserModule,

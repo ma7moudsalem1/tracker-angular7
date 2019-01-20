@@ -1,3 +1,46 @@
-<p>
-  tasks works!
-</p>
+
+<div class="mt-5 col-12">
+  <div class="card">
+    <div class="card-header">
+      <span *ngIf="project">Tasks [ {{ project.name }} ] </span> 
+
+      <a class="btn btn-success" [routerLink]="['/task/create/', project.id]" *ngIf="project">
+          Add Task
+    </a>
+    </div>
+    
+    <div class="card-body">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th >Name</th>
+            <th >Status</th>
+            <th >Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks">
+            
+            <td >{{ task.id }}</td>
+            <td>{{ task.name }}</td>
+            <td>{{ task.status }}</td>
+            <td scope="row">
+
+              <a [routerLink]="['/task/', task.project_id,task.id]" class="btn btn-primary">
+                    Edit
+              </a>
+
+              <button (click)="deleteTask(task)" class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

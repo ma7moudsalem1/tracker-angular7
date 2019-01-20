@@ -7,6 +7,8 @@ import { BeforeLoginService } from './services/before-login.service';
 import { AfterLoginService } from './services/after-login.service';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { CreateComponent } from './components/projects/create/create.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { TaskFormComponent } from './components/tasks/task-form/task-form.component';
 
 const appRoutes: Routes = [
   {
@@ -44,7 +46,23 @@ const appRoutes: Routes = [
     path: 'project/:id',
     component: CreateComponent,
     canActivate: [AfterLoginService]
+  },
+  {
+    path: 'tasks/:project',
+    component: TasksComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'task/create/:project',
+    component: TaskFormComponent,
+    canActivate: [AfterLoginService]
+  },
+  {
+    path: 'task/:project/:task',
+    component: TaskFormComponent,
+    canActivate: [AfterLoginService]
   }
+
 ];
 
 @NgModule({

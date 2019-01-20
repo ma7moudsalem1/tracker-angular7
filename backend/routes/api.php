@@ -27,7 +27,7 @@ Route::group(['namespace' => 'Api', 'middleware' => ['cors']], function(){
 		Route::apiResources([
 			'user'     => 'UserController',
 			'project'  => 'ProjectController',
-			'task'     => 'TaskController'
+			'/task'     => 'TaskController'
 		]);
 		Route::get('{project}/tasks/get', 'TaskController@getProjectTasks')->name('project.tasks');
 		Route::get('projects/option', 'TaskController@ProjectOption')->name('project.option');
